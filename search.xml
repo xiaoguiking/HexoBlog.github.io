@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>My New blog</title>
+      <link href="/2020/04/08/My-New-blog/"/>
+      <url>/2020/04/08/My-New-blog/</url>
+      
+        <content type="html"><![CDATA[<h2 id="程序员搭建技术博客神器-Hexo-github"><a href="#程序员搭建技术博客神器-Hexo-github" class="headerlink" title="程序员搭建技术博客神器 Hexo + github"></a>程序员搭建技术博客神器 Hexo + github</h2><h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="安装前提准备"><a href="#安装前提准备" class="headerlink" title="安装前提准备"></a>安装前提准备</h3><ul><li>Node.js &gt; 8.10(建议使用Node.js及以上版本)</li><li>Git </li></ul><h3 id="Git安装指导"><a href="#Git安装指导" class="headerlink" title="Git安装指导"></a>Git安装指导</h3><ul><li>Windows：下载并安装 git.</li><li>Mac：使用 Homebrew, - MacPorts 或者下载 安装程序。</li><li>Linux (Ubuntu, Debian)：sudo apt-get install git-core</li><li>Linux (Fedora, Red Hat, CentOS)：sudo yum install git-core</li></ul><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>全局安装</p><blockquote><p>npm install -g hexo-cli</p></blockquote><h3 id="进阶安装使用"><a href="#进阶安装使用" class="headerlink" title="进阶安装使用"></a>进阶安装使用</h3><p>局部指定文件夹目录安装</p><blockquote><p>npm install hexo</p></blockquote><h3 id="启动运行"><a href="#启动运行" class="headerlink" title="启动运行"></a>启动运行</h3><pre><code>$ hexo server 执行命令INFO  Start processingINFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/04/07/hello-world/"/>
+      <url>/2020/04/07/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
