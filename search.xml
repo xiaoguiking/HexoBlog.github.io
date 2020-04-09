@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>网络</title>
+      <link href="/2020/04/09/%E7%BD%91%E7%BB%9C/"/>
+      <url>/2020/04/09/%E7%BD%91%E7%BB%9C/</url>
+      
+        <content type="html"><![CDATA[<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ul><li>HTTP<ul><li>常见的状态码那些</li><li>304表示什么和302区别</li><li>介绍一下HTTP缓存策略</li><li>Connection为keep-alive表示什么</li></ul></li><li>DNS<ul><li>介绍DNS</li></ul></li><li>TCP<ul><li>三次握手</li><li>四次挥手</li></ul></li><li>HTTPS<ul><li>介绍HTTPS工作原理</li><li>HTTPS和http区别</li></ul></li><li>CDN<ul><li>介绍CDN是什么以及使用场景</li><li>CDN回源是什么</li></ul></li><li>从输入URL到展示，发生过程</li></ul><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status" target="_blank" rel="noopener">状态码学习</a></p><table><thead><tr><th>HTTP响应状态</th><th>含义</th></tr></thead><tbody><tr><td>100 — 199</td><td>信息响应</td></tr><tr><td>200 — 299</td><td>成功响应</td></tr><tr><td>300 —  399</td><td>重定向</td></tr><tr><td>400 — 499</td><td>客户端错误</td></tr><tr><td>500 — 599</td><td>服务端错误</td></tr></tbody></table><p><em>列举部分常用状态码</em></p><h3 id="信息响应"><a href="#信息响应" class="headerlink" title="信息响应"></a>信息响应</h3><ul><li><p>100 continue</p><p> 这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它 </p></li></ul><h3 id="成功响应"><a href="#成功响应" class="headerlink" title="成功响应"></a>成功响应</h3><ul><li><p>200 OK 请求成功 成功的含义取决于HTTP</p><ul><li>GET 资源已被提取并且在消息正文中传输</li><li>HEAD 实体标头位于消息正文中</li><li>POST 描述动作结果的资源在消息体中传输</li><li>TRACE 消息正文包含服务器收到的请求消息</li></ul></li><li><p>202 Accepted</p><p>请求已经接收到，但还未响应，没有结果。</p></li><li><p>204  Reset Content</p><p>服务器成功处理了请求，但不需要返回实体内容，并且希望返回更新了的元信息。</p></li></ul><h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><ul><li><p>302 Fount </p><p>请求的资源现在临时从不同的URL响应请求</p></li><li><p>304 Not Modified</p><p>如果客户端发送了一个带条件的GET请求，且该请求已经被允许，而文档内容（自上次访问以来或者根据请求的条件），并没有改变，则服务区应当返回这个状态码。</p></li></ul><h3 id="客户端响应"><a href="#客户端响应" class="headerlink" title="客户端响应"></a>客户端响应</h3><ul><li><p>400 Bad Request </p><p> 1.语义有误，当前请求无法被服务器理解。除非进行修改，否则客户端不应该重置提交请求</p><p> 2.请求参数错误。</p></li><li><p>403 Forbidden 服务器理解请求，但是拒绝执行他。</p></li><li><p>404 Not Found</p><p> 请求失败，请求所希望得到的资源没有在服务器上发现。</p></li></ul><ul><li><p>429 Too many Requests</p><p> 用户在给定时间内发送了太多请求</p></li></ul><h3 id="服务端响应"><a href="#服务端响应" class="headerlink" title="服务端响应"></a>服务端响应</h3><ul><li><p>500  Internal Server Error</p><p> 服务器遇到了不知道如何处理的情况</p></li><li><p>502 bad getWay</p><p> 服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。</p></li><li><p>503 Service Unavailable</p><p>  服务器没有准备好处理请求 </p></li></ul><ul><li><p>504 Getway  Timeout</p><p>   当服务器作为网关，不能及时得到响应返回错误代码</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>My New blog</title>
       <link href="/2020/04/08/My-New-blog/"/>
       <url>/2020/04/08/My-New-blog/</url>
@@ -11,6 +36,18 @@
         <content type="html"><![CDATA[<h2 id="程序员搭建技术博客神器-Hexo-github"><a href="#程序员搭建技术博客神器-Hexo-github" class="headerlink" title="程序员搭建技术博客神器 Hexo + github"></a>程序员搭建技术博客神器 Hexo + github</h2><h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="安装前提准备"><a href="#安装前提准备" class="headerlink" title="安装前提准备"></a>安装前提准备</h3><ul><li>Node.js &gt; 8.10(建议使用Node.js及以上版本)</li><li>Git </li></ul><h3 id="Git安装指导"><a href="#Git安装指导" class="headerlink" title="Git安装指导"></a>Git安装指导</h3><ul><li>Windows：下载并安装 git.</li><li>Mac：使用 Homebrew, - MacPorts 或者下载 安装程序。</li><li>Linux (Ubuntu, Debian)：sudo apt-get install git-core</li><li>Linux (Fedora, Red Hat, CentOS)：sudo yum install git-core</li></ul><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>全局安装</p><blockquote><p>npm install -g hexo-cli</p></blockquote><h3 id="进阶安装使用"><a href="#进阶安装使用" class="headerlink" title="进阶安装使用"></a>进阶安装使用</h3><p>局部指定文件夹目录安装</p><blockquote><p>npm install hexo</p></blockquote><h3 id="启动运行"><a href="#启动运行" class="headerlink" title="启动运行"></a>启动运行</h3><pre><code>$ hexo server 执行命令INFO  Start processingINFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop</code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
       
     </entry>
     

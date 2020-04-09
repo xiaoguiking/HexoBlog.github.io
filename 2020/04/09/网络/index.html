@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, ">
+    <meta name="keywords" content="网络, ">
     <meta name="description" content="程序员日常记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | </title>
+    <title>网络 | </title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">网络</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">网络</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
+                                网络
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -448,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-07
+                    2020-04-09
                 </div>
                 
 
@@ -465,15 +478,126 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ul>
+<li>HTTP<ul>
+<li>常见的状态码那些</li>
+<li>304表示什么和302区别</li>
+<li>介绍一下HTTP缓存策略</li>
+<li>Connection为keep-alive表示什么</li>
+</ul>
+</li>
+<li>DNS<ul>
+<li>介绍DNS</li>
+</ul>
+</li>
+<li>TCP<ul>
+<li>三次握手</li>
+<li>四次挥手</li>
+</ul>
+</li>
+<li>HTTPS<ul>
+<li>介绍HTTPS工作原理</li>
+<li>HTTPS和http区别</li>
+</ul>
+</li>
+<li>CDN<ul>
+<li>介绍CDN是什么以及使用场景</li>
+<li>CDN回源是什么</li>
+</ul>
+</li>
+<li>从输入URL到展示，发生过程</li>
+</ul>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status" target="_blank" rel="noopener">状态码学习</a></p>
+<table>
+<thead>
+<tr>
+<th>HTTP响应状态</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>100 — 199</td>
+<td>信息响应</td>
+</tr>
+<tr>
+<td>200 — 299</td>
+<td>成功响应</td>
+</tr>
+<tr>
+<td>300 —  399</td>
+<td>重定向</td>
+</tr>
+<tr>
+<td>400 — 499</td>
+<td>客户端错误</td>
+</tr>
+<tr>
+<td>500 — 599</td>
+<td>服务端错误</td>
+</tr>
+</tbody></table>
+<p><em>列举部分常用状态码</em></p>
+<h3 id="信息响应"><a href="#信息响应" class="headerlink" title="信息响应"></a>信息响应</h3><ul>
+<li><p>100 continue</p>
+<p> 这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它 </p>
+</li>
+</ul>
+<h3 id="成功响应"><a href="#成功响应" class="headerlink" title="成功响应"></a>成功响应</h3><ul>
+<li><p>200 OK 请求成功 成功的含义取决于HTTP</p>
+<ul>
+<li>GET 资源已被提取并且在消息正文中传输</li>
+<li>HEAD 实体标头位于消息正文中</li>
+<li>POST 描述动作结果的资源在消息体中传输</li>
+<li>TRACE 消息正文包含服务器收到的请求消息</li>
+</ul>
+</li>
+<li><p>202 Accepted</p>
+<p>请求已经接收到，但还未响应，没有结果。</p>
+</li>
+<li><p>204  Reset Content</p>
+<p>服务器成功处理了请求，但不需要返回实体内容，并且希望返回更新了的元信息。</p>
+</li>
+</ul>
+<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><ul>
+<li><p>302 Fount </p>
+<p>请求的资源现在临时从不同的URL响应请求</p>
+</li>
+<li><p>304 Not Modified</p>
+<p>如果客户端发送了一个带条件的GET请求，且该请求已经被允许，而文档内容（自上次访问以来或者根据请求的条件），并没有改变，则服务区应当返回这个状态码。</p>
+</li>
+</ul>
+<h3 id="客户端响应"><a href="#客户端响应" class="headerlink" title="客户端响应"></a>客户端响应</h3><ul>
+<li><p>400 Bad Request </p>
+<p> 1.语义有误，当前请求无法被服务器理解。除非进行修改，否则客户端不应该重置提交请求</p>
+<p> 2.请求参数错误。</p>
+</li>
+<li><p>403 Forbidden 服务器理解请求，但是拒绝执行他。</p>
+</li>
+<li><p>404 Not Found</p>
+<p> 请求失败，请求所希望得到的资源没有在服务器上发现。</p>
+</li>
+</ul>
+<ul>
+<li><p>429 Too many Requests</p>
+<p> 用户在给定时间内发送了太多请求</p>
+</li>
+</ul>
+<h3 id="服务端响应"><a href="#服务端响应" class="headerlink" title="服务端响应"></a>服务端响应</h3><ul>
+<li><p>500  Internal Server Error</p>
+<p> 服务器遇到了不知道如何处理的情况</p>
+</li>
+<li><p>502 bad getWay</p>
+<p> 服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。</p>
+</li>
+<li><p>503 Service Unavailable</p>
+<p>  服务器没有准备好处理请求 </p>
+</li>
+</ul>
+<ul>
+<li><p>504 Getway  Timeout</p>
+<p>   当服务器作为网关，不能及时得到响应返回错误代码</p>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -499,7 +623,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/04/07/hello-world/">http://yoursite.com/2020/04/07/hello-world/</a>
+                    <a href="http://yoursite.com/2020/04/09/%E7%BD%91%E7%BB%9C/">http://yoursite.com/2020/04/09/%E7%BD%91%E7%BB%9C/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -536,7 +660,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">网络</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -702,9 +830,79 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/04/09/%E7%BD%91%E7%BB%9C/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="网络">
+                        
+                        <span class="card-title">网络</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            网络
+HTTP
+常见的状态码那些
+304表示什么和302区别
+介绍一下HTTP缓存策略
+Connection为keep-alive表示什么
+
+
+DNS
+介绍DNS
+
+
+TCP
+三次握手
+四次挥手
+
+
+HTTPS
+介绍HTTPS工作原理
+HT
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    网络
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">网络</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/04/08/My-New-blog/">
                     <div class="card-image">
@@ -724,9 +922,9 @@ Node
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -747,44 +945,6 @@ Node
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/07/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            xiaoguiking
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>
