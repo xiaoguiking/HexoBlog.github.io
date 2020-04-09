@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网络, ">
+    <meta name="keywords" content="前端面试, ">
     <meta name="description" content="程序员日常记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>网络 | </title>
+    <title>前端面试 | </title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网络</h1>
+                    <h1 class="description center-align post-title">前端面试</h1>
                 </div>
             </div>
         </div>
@@ -436,8 +436,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                                <span class="chip bg-color">网络</span>
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
                             </a>
                         
                     </div>
@@ -448,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
-                                网络
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" class="post-category">
+                                前端面试
                             </a>
                         
                     </div>
@@ -478,127 +478,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ul>
-<li>HTTP<ul>
-<li>常见的状态码那些</li>
-<li>304表示什么和302区别</li>
-<li>介绍一下HTTP缓存策略</li>
-<li>Connection为keep-alive表示什么</li>
-</ul>
-</li>
-<li>DNS<ul>
-<li>介绍DNS</li>
-</ul>
-</li>
-<li>TCP<ul>
-<li>三次握手</li>
-<li>四次挥手</li>
-</ul>
-</li>
-<li>HTTPS<ul>
-<li>介绍HTTPS工作原理</li>
-<li>HTTPS和http区别</li>
-</ul>
-</li>
-<li>CDN<ul>
-<li>介绍CDN是什么以及使用场景</li>
-<li>CDN回源是什么</li>
-</ul>
-</li>
-<li>从输入URL到展示，发生过程</li>
-</ul>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status" target="_blank" rel="noopener">状态码学习</a></p>
-<table>
-<thead>
-<tr>
-<th>HTTP响应状态</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>100 — 199</td>
-<td>信息响应</td>
-</tr>
-<tr>
-<td>200 — 299</td>
-<td>成功响应</td>
-</tr>
-<tr>
-<td>300 —  399</td>
-<td>重定向</td>
-</tr>
-<tr>
-<td>400 — 499</td>
-<td>客户端错误</td>
-</tr>
-<tr>
-<td>500 — 599</td>
-<td>服务端错误</td>
-</tr>
-</tbody></table>
-<p><em>列举部分常用状态码</em></p>
-<h3 id="信息响应"><a href="#信息响应" class="headerlink" title="信息响应"></a>信息响应</h3><ul>
-<li><p>100 continue</p>
-<p> 这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它 </p>
-</li>
-</ul>
-<h3 id="成功响应"><a href="#成功响应" class="headerlink" title="成功响应"></a>成功响应</h3><ul>
-<li><p>200 OK 请求成功 成功的含义取决于HTTP</p>
-<ul>
-<li>GET 资源已被提取并且在消息正文中传输</li>
-<li>HEAD 实体标头位于消息正文中</li>
-<li>POST 描述动作结果的资源在消息体中传输</li>
-<li>TRACE 消息正文包含服务器收到的请求消息</li>
-</ul>
-</li>
-<li><p>202 Accepted</p>
-<p>请求已经接收到，但还未响应，没有结果。</p>
-</li>
-<li><p>204  Reset Content</p>
-<p>服务器成功处理了请求，但不需要返回实体内容，并且希望返回更新了的元信息。</p>
-</li>
-</ul>
-<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><ul>
-<li><p>302 Fount </p>
-<p>请求的资源现在临时从不同的URL响应请求</p>
-</li>
-<li><p>304 Not Modified</p>
-<p>如果客户端发送了一个带条件的GET请求，且该请求已经被允许，而文档内容（自上次访问以来或者根据请求的条件），并没有改变，则服务区应当返回这个状态码。</p>
-</li>
-</ul>
-<h3 id="客户端响应"><a href="#客户端响应" class="headerlink" title="客户端响应"></a>客户端响应</h3><ul>
-<li><p>400 Bad Request </p>
-<p> 1.语义有误，当前请求无法被服务器理解。除非进行修改，否则客户端不应该重置提交请求</p>
-<p> 2.请求参数错误。</p>
-</li>
-<li><p>403 Forbidden 服务器理解请求，但是拒绝执行他。</p>
-</li>
-<li><p>404 Not Found</p>
-<p> 请求失败，请求所希望得到的资源没有在服务器上发现。</p>
-</li>
-</ul>
-<ul>
-<li><p>429 Too many Requests</p>
-<p> 用户在给定时间内发送了太多请求</p>
-</li>
-</ul>
-<h3 id="服务端响应"><a href="#服务端响应" class="headerlink" title="服务端响应"></a>服务端响应</h3><ul>
-<li><p>500  Internal Server Error</p>
-<p> 服务器遇到了不知道如何处理的情况</p>
-</li>
-<li><p>502 bad getWay</p>
-<p> 服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。</p>
-</li>
-<li><p>503 Service Unavailable</p>
-<p>  服务器没有准备好处理请求 </p>
-</li>
-</ul>
-<ul>
-<li><p>504 Getway  Timeout</p>
-<p>   当服务器作为网关，不能及时得到响应返回错误代码</p>
-</li>
-</ul>
-
+                
             </div>
             <hr/>
 
@@ -623,7 +503,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/04/09/%E7%BD%91%E7%BB%9C/">http://yoursite.com/2020/04/09/%E7%BD%91%E7%BB%9C/</a>
+                    <a href="http://yoursite.com/2020/04/09/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">http://yoursite.com/2020/04/09/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -661,8 +541,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                                    <span class="chip bg-color">网络</span>
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
                                 </a>
                             
                         </div>
@@ -834,19 +714,45 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/09/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
+                <a href="/2020/04/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%80%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="前端面试">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="前端性能优化盘点（一）">
                         
-                        <span class="card-title">前端面试</span>
+                        <span class="card-title">前端性能优化盘点（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            前端性能优化（盘点一）前端性能优化
+
+网络层面
+构建层面
+浏览器渲染层面
+服务端层面
+
+功能区分
+
+资源合并与压缩
+
+图片的编码原理和类型选择
+
+浏览器的渲染机制
+
+濑加载预加载
+
+浏览器存储
+
+缓存机制
+
+PWA
+
+Vue-ssr 
+
+
+
                         
                     </div>
                     <div class="publish-info">
@@ -857,8 +763,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" class="post-category">
-                                    前端面试
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-category">
+                                    前端性能优化
                                 </a>
                             
                             
@@ -868,8 +774,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">前端性能优化</span>
                     </a>
                     
                 </div>
@@ -883,33 +789,50 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/08/My-New-blog/">
+                <a href="/2020/04/09/%E7%BD%91%E7%BB%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="My New blog">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="网络">
                         
-                        <span class="card-title">My New blog</span>
+                        <span class="card-title">网络</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            程序员搭建技术博客神器 Hexo + github什么是 Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页
-安装安装前提准备
-Node
+                            网络
+HTTP
+常见的状态码那些
+304表示什么和302区别
+介绍一下HTTP缓存策略
+Connection为keep-alive表示什么
+
+
+DNS
+介绍DNS
+
+
+TCP
+三次握手
+四次挥手
+
+
+HTTPS
+介绍HTTPS工作原理
+HT
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    网络
                                 </a>
                             
                             
@@ -919,8 +842,8 @@ Node
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">网络</span>
                     </a>
                     
                 </div>

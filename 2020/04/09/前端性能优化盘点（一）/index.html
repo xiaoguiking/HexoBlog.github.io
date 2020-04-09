@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网络, ">
+    <meta name="keywords" content="前端性能优化盘点（一）, ">
     <meta name="description" content="程序员日常记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>网络 | </title>
+    <title>前端性能优化盘点（一） | </title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网络</h1>
+                    <h1 class="description center-align post-title">前端性能优化盘点（一）</h1>
                 </div>
             </div>
         </div>
@@ -436,8 +436,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                                <span class="chip bg-color">网络</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                                <span class="chip bg-color">前端性能优化</span>
                             </a>
                         
                     </div>
@@ -448,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
-                                网络
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-category">
+                                前端性能优化
                             </a>
                         
                     </div>
@@ -478,125 +478,75 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ul>
-<li>HTTP<ul>
-<li>常见的状态码那些</li>
-<li>304表示什么和302区别</li>
-<li>介绍一下HTTP缓存策略</li>
-<li>Connection为keep-alive表示什么</li>
-</ul>
-</li>
-<li>DNS<ul>
-<li>介绍DNS</li>
-</ul>
-</li>
-<li>TCP<ul>
-<li>三次握手</li>
-<li>四次挥手</li>
-</ul>
-</li>
-<li>HTTPS<ul>
-<li>介绍HTTPS工作原理</li>
-<li>HTTPS和http区别</li>
-</ul>
-</li>
-<li>CDN<ul>
-<li>介绍CDN是什么以及使用场景</li>
-<li>CDN回源是什么</li>
-</ul>
-</li>
-<li>从输入URL到展示，发生过程</li>
-</ul>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status" target="_blank" rel="noopener">状态码学习</a></p>
-<table>
-<thead>
-<tr>
-<th>HTTP响应状态</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>100 — 199</td>
-<td>信息响应</td>
-</tr>
-<tr>
-<td>200 — 299</td>
-<td>成功响应</td>
-</tr>
-<tr>
-<td>300 —  399</td>
-<td>重定向</td>
-</tr>
-<tr>
-<td>400 — 499</td>
-<td>客户端错误</td>
-</tr>
-<tr>
-<td>500 — 599</td>
-<td>服务端错误</td>
-</tr>
-</tbody></table>
-<p><em>列举部分常用状态码</em></p>
-<h3 id="信息响应"><a href="#信息响应" class="headerlink" title="信息响应"></a>信息响应</h3><ul>
-<li><p>100 continue</p>
-<p> 这个临时响应表明，迄今为止的所有内容都是可行的，客户端应该继续请求，如果已经完成，则忽略它 </p>
-</li>
-</ul>
-<h3 id="成功响应"><a href="#成功响应" class="headerlink" title="成功响应"></a>成功响应</h3><ul>
-<li><p>200 OK 请求成功 成功的含义取决于HTTP</p>
+                <h1 id="前端性能优化（盘点一）"><a href="#前端性能优化（盘点一）" class="headerlink" title="前端性能优化（盘点一）"></a>前端性能优化（盘点一）</h1><p><strong>前端性能优化</strong></p>
 <ul>
-<li>GET 资源已被提取并且在消息正文中传输</li>
-<li>HEAD 实体标头位于消息正文中</li>
-<li>POST 描述动作结果的资源在消息体中传输</li>
-<li>TRACE 消息正文包含服务器收到的请求消息</li>
+<li>网络层面</li>
+<li>构建层面</li>
+<li>浏览器渲染层面</li>
+<li>服务端层面</li>
 </ul>
-</li>
-<li><p>202 Accepted</p>
-<p>请求已经接收到，但还未响应，没有结果。</p>
-</li>
-<li><p>204  Reset Content</p>
-<p>服务器成功处理了请求，但不需要返回实体内容，并且希望返回更新了的元信息。</p>
-</li>
-</ul>
-<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><ul>
-<li><p>302 Fount </p>
-<p>请求的资源现在临时从不同的URL响应请求</p>
-</li>
-<li><p>304 Not Modified</p>
-<p>如果客户端发送了一个带条件的GET请求，且该请求已经被允许，而文档内容（自上次访问以来或者根据请求的条件），并没有改变，则服务区应当返回这个状态码。</p>
-</li>
-</ul>
-<h3 id="客户端响应"><a href="#客户端响应" class="headerlink" title="客户端响应"></a>客户端响应</h3><ul>
-<li><p>400 Bad Request </p>
-<p> 1.语义有误，当前请求无法被服务器理解。除非进行修改，否则客户端不应该重置提交请求</p>
-<p> 2.请求参数错误。</p>
-</li>
-<li><p>403 Forbidden 服务器理解请求，但是拒绝执行他。</p>
-</li>
-<li><p>404 Not Found</p>
-<p> 请求失败，请求所希望得到的资源没有在服务器上发现。</p>
-</li>
-</ul>
+<p><strong>功能区分</strong></p>
 <ul>
-<li><p>429 Too many Requests</p>
-<p> 用户在给定时间内发送了太多请求</p>
+<li><p>资源合并与压缩</p>
+</li>
+<li><p>图片的编码原理和类型选择</p>
+</li>
+<li><p>浏览器的渲染机制</p>
+</li>
+<li><p>濑加载预加载</p>
+</li>
+<li><p>浏览器存储</p>
+</li>
+<li><p>缓存机制</p>
+</li>
+<li><p>PWA</p>
+</li>
+<li><p>Vue-ssr </p>
 </li>
 </ul>
-<h3 id="服务端响应"><a href="#服务端响应" class="headerlink" title="服务端响应"></a>服务端响应</h3><ul>
-<li><p>500  Internal Server Error</p>
-<p> 服务器遇到了不知道如何处理的情况</p>
-</li>
-<li><p>502 bad getWay</p>
-<p> 服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。</p>
-</li>
-<li><p>503 Service Unavailable</p>
-<p>  服务器没有准备好处理请求 </p>
-</li>
-</ul>
+<h2 id="1-资源合并与压缩"><a href="#1-资源合并与压缩" class="headerlink" title="1.资源合并与压缩"></a>1.资源合并与压缩</h2><h3 id="http请求过程中性能优化"><a href="#http请求过程中性能优化" class="headerlink" title="http请求过程中性能优化"></a>http请求过程中性能优化</h3><blockquote>
+<p>浏览器的一个请求从发送到返回都经历了什么</p>
+</blockquote>
 <ul>
-<li><p>504 Getway  Timeout</p>
-<p>   当服务器作为网关，不能及时得到响应返回错误代码</p>
-</li>
+<li>输入url</li>
+<li>经过domain 到dns 服务器</li>
+<li>dns服务器经过ip 到浏览器</li>
+<li>浏览器经过（局域网—- 交换机—  路由器 —  主干网络）</li>
+<li>调用Model 获取 数据 通过View 回返</li>
+<li>render 渲染到浏览器 ， dom树 + css 树 </li>
+<li>最终渲染</li>
+</ul>
+<p>优化点： </p>
+<ul>
+<li>DNS是否可以通过缓存减少dns查询时间</li>
+<li>CDN 解决缓存问题（静态资源） — cookie， 域名注意</li>
+<li>网络请求的过程走的网络环境？</li>
+<li>相同的静态资源缓存问题</li>
+<li>能否减少请求http请求大小</li>
+<li>减少http请求</li>
+<li>服务端渲染</li>
+</ul>
+<h3 id="2-资源的合并与压缩-—-Html-Css-Js"><a href="#2-资源的合并与压缩-—-Html-Css-Js" class="headerlink" title="2.资源的合并与压缩 —  Html/Css/Js"></a>2.资源的合并与压缩 —  Html/Css/Js</h3><ul>
+<li>html/css/js 压缩</li>
+<li>文件合并</li>
+<li>开启gzip</li>
+</ul>
+<blockquote>
+<p>html压缩： 主要是浏览器环境中空格等的压缩</p>
+</blockquote>
+<p><strong>Js压缩</strong></p>
+<ul>
+<li>无效字符删除</li>
+<li>代码语义优化</li>
+<li>删除注释</li>
+</ul>
+<p><strong>html/css压缩方式</strong></p>
+<ul>
+<li>使用在线网站</li>
+<li>node— html-minifier 工具包</li>
+<li>后端模板引擎渲染压缩</li>
+<li>clean-css(限定css)</li>
+<li>uglifyjs2(js压缩)</li>
 </ul>
 
             </div>
@@ -623,7 +573,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/04/09/%E7%BD%91%E7%BB%9C/">http://yoursite.com/2020/04/09/%E7%BD%91%E7%BB%9C/</a>
+                    <a href="http://yoursite.com/2020/04/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%80%EF%BC%89/">http://yoursite.com/2020/04/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%80%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -661,8 +611,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                                    <span class="chip bg-color">网络</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                                    <span class="chip bg-color">前端性能优化</span>
                                 </a>
                             
                         </div>
@@ -830,9 +780,86 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/04/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%80%EF%BC%89/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="前端性能优化盘点（一）">
+                        
+                        <span class="card-title">前端性能优化盘点（一）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前端性能优化（盘点一）前端性能优化
+
+网络层面
+构建层面
+浏览器渲染层面
+服务端层面
+
+功能区分
+
+资源合并与压缩
+
+图片的编码原理和类型选择
+
+浏览器的渲染机制
+
+濑加载预加载
+
+浏览器存储
+
+缓存机制
+
+PWA
+
+Vue-ssr 
+
+
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-category">
+                                    前端性能优化
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">前端性能优化</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/04/09/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
                     <div class="card-image">
@@ -850,9 +877,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -870,57 +897,6 @@
                     
                     <a href="/tags/CSS/">
                         <span class="chip bg-color">CSS</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/08/My-New-blog/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="My New blog">
-                        
-                        <span class="card-title">My New blog</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            程序员搭建技术博客神器 Hexo + github什么是 Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页
-安装安装前提准备
-Node
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
