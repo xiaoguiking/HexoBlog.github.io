@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>前端性能优化盘点（三）</title>
+      <link href="/2020/04/11/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+      <url>/2020/04/11/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h3 id="HTML-CSS-Js-页面加载渲染过程"><a href="#HTML-CSS-Js-页面加载渲染过程" class="headerlink" title="HTML/CSS/Js 页面加载渲染过程"></a>HTML/CSS/Js 页面加载渲染过程</h3><blockquote><p>一个网站在浏览器端如何进行渲染？</p></blockquote><p><img src="images%5CHTML%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B.png" alt=""></p><p><strong>渲染分解解析过程</strong></p><ul><li>1.html解析DOM tree</li><li>2.css解析出Style Rules</li><li>3.将二者关联生成Render Tree</li><li>4.Layout根据render Tree 计算每个节点的信息</li><li>5.Painting根据计算好的信息绘制整个页面</li></ul><h3 id="HTML渲染过程的特性"><a href="#HTML渲染过程的特性" class="headerlink" title="HTML渲染过程的特性"></a>HTML渲染过程的特性</h3><ul><li>顺序执行并发加载<ul><li>词法分析</li><li>并发加载</li><li>并发上限</li></ul></li><li>是否阻塞<ul><li>css head 阻塞额页面渲染 推荐link引入</li><li>css阻塞js执行 ，操作dom对于css修改</li><li>css不阻塞外部脚步加载</li><li>直接引入的js阻塞页面的渲染 <script> document.write 修改页面结构</li><li>js不阻塞资源的加载</li><li>js顺序执行，阻塞后续js逻辑的执行</li></ul></li><li>依赖关系</li><li>引入方式</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端性能优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端性能优化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>react生命周期</title>
+      <link href="/2020/04/11/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+      <url>/2020/04/11/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端性能优化盘点（二）</title>
       <link href="/2020/04/10/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
       <url>/2020/04/10/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%BA%8C%EF%BC%89/</url>

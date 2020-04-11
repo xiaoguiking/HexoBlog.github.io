@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端性能优化盘点（二）, 个人博客，更多前端技术与你分享">
+    <meta name="keywords" content="react生命周期, 个人博客，更多前端技术与你分享">
     <meta name="description" content="程序员日常记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端性能优化盘点（二） | 深渊在凝视着你</title>
+    <title>react生命周期 | 深渊在凝视着你</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端性能优化盘点（二）</h1>
+                    <h1 class="description center-align post-title">react生命周期</h1>
                 </div>
             </div>
         </div>
@@ -434,25 +434,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-                                <span class="chip bg-color">前端性能优化</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-category">
-                                前端性能优化
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -461,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-10
+                    2020-04-11
                 </div>
                 
 
@@ -478,41 +465,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="页面性能优化02-图片"><a href="#页面性能优化02-图片" class="headerlink" title="页面性能优化02-图片"></a>页面性能优化02-图片</h2><h3 id="1-png8-png24-png32-区别"><a href="#1-png8-png24-png32-区别" class="headerlink" title="1 .png8/png24/png32 区别"></a>1 .png8/png24/png32 区别</h3><ul>
-<li>png8 ———- 256色，支持透明</li>
-<li>png24 ———  2-24 色， 不支持透明</li>
-<li>png32 ——— 2– 24色， 支持透明</li>
-</ul>
-<h3 id="2-图片相关的优化-不同格式图片常用的业务场景"><a href="#2-图片相关的优化-不同格式图片常用的业务场景" class="headerlink" title="2. 图片相关的优化- 不同格式图片常用的业务场景"></a>2. 图片相关的优化- 不同格式图片常用的业务场景</h3><ul>
-<li>jpg有损压缩，压缩率高，不支持透明，不需要支持透明图片场景</li>
-<li>png支持透明，浏览器兼容好，大部分需要透明场景</li>
-<li>webp压缩程度更好，在ios webview 有兼容性问题  安卓</li>
-<li>svg矢量图，代码内嵌，相对较小，图片样式相对简单场景</li>
-</ul>
-<h3 id="3-图片压缩"><a href="#3-图片压缩" class="headerlink" title="3.图片压缩"></a>3.图片压缩</h3><ul>
-<li>Css雪碧图</li>
-</ul>
-<pre><code>把网站用的一些小图片整合到一张单独的图片中， 减少网站http的请求数量
-缺点： 整合图片较大，一次加载比较慢
-</code></pre><ul>
-<li><p>Image内嵌</p>
-<pre><code>通过base64 将图片的内容内嵌到html当中
-减少网站http请求</code></pre></li>
-<li><p>使用矢量图svg</p>
-<pre><code>使用字体图片iconfont</code></pre></li>
-<li><p>安卓下使用webp</p>
-</li>
-</ul>
-<h3 id="4-图片压缩使用"><a href="#4-图片压缩使用" class="headerlink" title="4.图片压缩使用"></a>4.图片压缩使用</h3><ul>
-<li><p>智图网站转换 jpg变成 webp</p>
-</li>
-<li><p>雪碧图制作 <a href="http://www.spritecow.com/" target="_blank" rel="noopener">http://www.spritecow.com/</a> </p>
-</li>
-<li><p>svg</p>
-<pre><code>通过svg 标签内嵌引入
-&lt;svg  xmlns=&quot;&quot;/&gt;</code></pre></li>
-</ul>
-
+                
             </div>
             <hr/>
 
@@ -537,7 +490,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/04/10/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%BA%8C%EF%BC%89/">http://yoursite.com/2020/04/10/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%BA%8C%EF%BC%89/</a>
+                    <a href="http://yoursite.com/2020/04/11/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">http://yoursite.com/2020/04/11/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -574,11 +527,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-                                    <span class="chip bg-color">前端性能优化</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -748,19 +697,28 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/11/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                <a href="/2020/04/11/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%89%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="react生命周期">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="前端性能优化盘点（三）">
                         
-                        <span class="card-title">react生命周期</span>
+                        <span class="card-title">前端性能优化盘点（三）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            HTML/CSS/Js 页面加载渲染过程
+一个网站在浏览器端如何进行渲染？
+
+
+渲染分解解析过程
+
+1.html解析DOM tree
+2.css解析出Style Rules
+3.将二者关联生成Render Tree
+4.Layout根据re
                         
                     </div>
                     <div class="publish-info">
@@ -769,11 +727,23 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            xiaoguiking
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-category">
+                                    前端性能优化
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">前端性能优化</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -785,50 +755,29 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%80%EF%BC%89/">
+                <a href="/2020/04/10/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%BA%8C%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="前端性能优化盘点（一）">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="前端性能优化盘点（二）">
                         
-                        <span class="card-title">前端性能优化盘点（一）</span>
+                        <span class="card-title">前端性能优化盘点（二）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前端性能优化（盘点一）前端性能优化
+                            页面性能优化02-图片1 .png8/png24/png32 区别
+png8 ———- 256色，支持透明
+png24 ———  2-24 色， 不支持透明
+png32 ——— 2– 24色， 支持透明
 
-网络层面
-构建层面
-浏览器渲染层面
-服务端层面
-
-功能区分
-
-资源合并与压缩
-
-图片的编码原理和类型选择
-
-浏览器的渲染机制
-
-濑加载预加载
-
-浏览器存储
-
-缓存机制
-
-PWA
-
-Vue-ssr 
-
-
-
+2. 图片相关的优化- 不同格式图
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
                             </span>
                         <span class="publish-author">
                             
