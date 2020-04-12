@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>react搭建MPA多页面应用实战记录</title>
+      <link href="/2020/04/12/react%E6%90%AD%E5%BB%BAMPA%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/"/>
+      <url>/2020/04/12/react%E6%90%AD%E5%BB%BAMPA%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="create-react-app创建的项目配置多入口MPA模式"><a href="#create-react-app创建的项目配置多入口MPA模式" class="headerlink" title="create-react-app创建的项目配置多入口MPA模式"></a>create-react-app创建的项目配置多入口MPA模式</h1><blockquote><p>bug: 报Cannot read property ‘filter’ of undefined ——- fix bug</p></blockquote><blockquote><p>原文参考感谢 一只小鸟er  原文链接：<a href="https://blog.csdn.net/qq_36400206/java/article/details/103074375" target="_blank" rel="noopener">https://blog.csdn.net/qq_36400206/java/article/details/103074375</a></p></blockquote><h2 id="一-首先yarn-eject项目"><a href="#一-首先yarn-eject项目" class="headerlink" title="一.首先yarn eject项目"></a>一.首先<code>yarn eject</code>项目</h2><p>执行<code>create-react-app code</code>，安装react项目，这时候的<code>package.json</code>已经集成了所有的逻辑，需要个性化配置，需要执行<code>yarn eject</code>将webpack配置文件拉出,文件树大致如下</p><ul><li><p>code根目录文件夹</p><ul><li><p>build</p></li><li><p>config 执行yarn eject出现的文件夹</p></li><li><p>node_modules</p></li><li><p>public</p></li><li><p>scripts 执行yarn eject 结果</p></li><li><p>src</p></li><li><p>package-lock.json</p></li><li><p>package.json</p></li></ul></li></ul><h2 id="二-配置webpack文件"><a href="#二-配置webpack文件" class="headerlink" title="二.配置webpack文件"></a>二.配置webpack文件</h2><p>1.在<code>config/webpack.config</code>里面找到配置入口文件<code>entry</code>入口处，需要改成对象形式</p><p><strong>单页面修改前</strong></p><pre class=" language-react"><code class="language-react">    entry:[         paths.appIndexJs,          isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient')         ].filter(Boolean),</code></pre><p><strong>多页面修改后</strong></p><pre class=" language-react"><code class="language-react"> entry:{      index: [paths.appIndexJs, isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient')].filter(Boolean),      query: [paths.appQueryJs, isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient')].filter(Boolean),      ticket: [paths.appTicketJs, isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient')].filter(Boolean),      order: [paths.appOrderJs, isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient')].filter(Boolean),    },原文链接：https://blog.csdn.net/qq_36400206/java/article/details/103074375</code></pre><p>2.入口文件路径在<code>config/paths.js</code>,项目中需要将几个文件单独放在新建的单独文件夹中，</p><p>分别放在index， order ticket query 的index.js</p><ul><li><p>index文件夹</p><ul><li>index.js</li><li>App.js</li><li>index.css</li><li>App.css</li></ul></li><li><p>order</p><ul><li><p>index.js</p></li><li><p>App.js</p></li></ul></li></ul><p>3.<strong>config/paths.js</strong></p><pre class=" language-react"><code class="language-react">  //  多个应用配置 start  appHtml: resolveApp('public/index.html'),  appQueryHtml: resolveApp('public/query.html'),  appOrderHtml: resolveApp('public/order.html'),  appTicketHtml: resolveApp('public/ticket.html'),  appIndexJs: resolveModule(resolveApp, 'src/index/index'),  appQueryJs: resolveModule(resolveApp, 'src/query/index'),  appTicketJs: resolveModule(resolveApp, 'src/ticket/index'),  appOrderJs: resolveModule(resolveApp, 'src/order/index'),  // 多个应用配置</code></pre><p>4.最后修改 最后修改HtmlWebpackPlugin，生成四个不同的html引入这些入口打包后的文件。生成几个页面，就要配置几个HtmlWebpackPlugin，filename为最后的html名称，chunkwei所引用的打包文件。 </p><pre class=" language-react"><code class="language-react">    new HtmlWebpackPlugin(        Object.assign(          {},          {            inject: true,            template: paths.appHtml,            filename: 'index.html',            chunk: ['index'],          },          isEnvProduction            ? {                minify: {                  removeComments: true,                  collapseWhitespace: true,                  removeRedundantAttributes: true,                  useShortDoctype: true,                  removeEmptyAttributes: true,                  removeStyleLinkTypeAttributes: true,                  keepClosingSlash: true,                  minifyJS: true,                  minifyCSS: true,                  minifyURLs: true,                },              }            : undefined        )      ),      new HtmlWebpackPlugin(        Object.assign(          {},          {            inject: true,            template: paths.appHtml,            filename: 'query.html',            chunk: ['query'],          },          isEnvProduction            ? {                minify: {                  removeComments: true,                  collapseWhitespace: true,                  removeRedundantAttributes: true,                  useShortDoctype: true,                  removeEmptyAttributes: true,                  removeStyleLinkTypeAttributes: true,                  keepClosingSlash: true,                  minifyJS: true,                  minifyCSS: true,                  minifyURLs: true,                },              }            : undefined        )      ),</code></pre><p>5<code>public</code>创建4个模板</p><pre class=" language-react"><code class="language-react">- public    index.html    query.html    order.html    ticket.html</code></pre><h2 id="三-运行打包命令-yarn-build"><a href="#三-运行打包命令-yarn-build" class="headerlink" title="三.运行打包命令 yarn build"></a>三.运行打包命令 yarn build</h2><pre class=" language-js"><code class="language-js">yarn buildyarn run v1<span class="token number">.22</span><span class="token punctuation">.</span><span class="token number">4</span>$ node scripts<span class="token operator">/</span>build<span class="token punctuation">.</span>jsCreating an optimized production build<span class="token operator">...</span>Failed to compile<span class="token punctuation">.</span>Cannot read property <span class="token string">'filter'</span> <span class="token keyword">of</span> undefinederror Command failed <span class="token keyword">with</span> exit code <span class="token number">1</span><span class="token punctuation">.</span>info Visit https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>yarnpkg<span class="token punctuation">.</span>com<span class="token operator">/</span>en<span class="token operator">/</span>docs<span class="token operator">/</span>cli<span class="token operator">/</span>run <span class="token keyword">for</span> documentation about <span class="token keyword">this</span> command<span class="token punctuation">.</span></code></pre><h2 id="四错误原因"><a href="#四错误原因" class="headerlink" title="四错误原因"></a>四错误原因</h2><pre><code>ManifestPlugin这个插件的作用是生成一份.json的文件，通过该文件的映射关系可以让我们知道webpack是如何追踪所有模块并映射到输出bundle中的。我们先来看原始的配置,这里fileName设置了输出文件名asset-manifest.json，publicPath设置了输出路径，最终要的是最后一个generate参数，自定义了输出的内容，里面有一段是取entrypoints.main，这是针对单一入口的配置，因为单一入口不指定name的情况默认name为main，当改成多入口的方式了之后这里面在entrypoints中自然是读取不到main这个值的，因此就报错，这里将generate这个参数去掉，恢复其默认值即可，或者将entrypoints这个key去掉。</code></pre><p>注释解决后</p><pre class=" language-js"><code class="language-js">      <span class="token keyword">new</span> <span class="token class-name">ManifestPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>        fileName<span class="token punctuation">:</span> <span class="token string">'asset-manifest.json'</span><span class="token punctuation">,</span>        publicPath<span class="token punctuation">:</span> publicPath<span class="token punctuation">,</span>        <span class="token comment" spellcheck="true">// generate: (seed, files, entrypoints) => {</span>        <span class="token comment" spellcheck="true">//   const manifestFiles = files.reduce((manifest, file) => {</span>        <span class="token comment" spellcheck="true">//     manifest[file.name] = file.path;</span>        <span class="token comment" spellcheck="true">//     return manifest;</span>        <span class="token comment" spellcheck="true">//   }, seed);</span>        <span class="token comment" spellcheck="true">//   const entrypointFiles = entrypoints.main.filter(</span>        <span class="token comment" spellcheck="true">//     fileName => !fileName.endsWith('.map')</span>        <span class="token comment" spellcheck="true">//   );</span>        <span class="token comment" spellcheck="true">//   return {</span>        <span class="token comment" spellcheck="true">//     files: manifestFiles,</span>        <span class="token comment" spellcheck="true">//     entrypoints: entrypointFiles,</span>        <span class="token comment" spellcheck="true">//   };</span>        <span class="token comment" spellcheck="true">// },</span>      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> React </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端性能优化盘点（三）</title>
       <link href="/2020/04/11/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%89%EF%BC%89/"/>
       <url>/2020/04/11/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%98%E7%82%B9%EF%BC%88%E4%B8%89%EF%BC%89/</url>
@@ -36,6 +61,18 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> React </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+        </tags>
       
     </entry>
     
