@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Props和state</title>
+      <link href="/2020/04/14/Props%E5%92%8Cstate/"/>
+      <url>/2020/04/14/Props%E5%92%8Cstate/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h2><p><a href="https://zh-hans.reactjs.org/docs/components-and-props.html" target="_blank" rel="noopener">reactProps</a></p><p>组件，概念上类似于JavaScript的函数，接受任意的入参（“props”），并返回用于描述页面展示内容的React元素。</p><blockquote><p>Props 只读性，无论是函数声明还是class声明，都不能修改自身的props</p></blockquote><p><code>App.js</code></p><pre class=" language-react"><code class="language-react">improt React from 'react';import Nav from './Nav;const data = ["react", "vue", "js"];const data1 = ["node", "server", "mysql"];export default function App() {    return (    <div>        <Nav nav={data} title="前端导航" />         <Nav nav={data1} title="后端导航" />     </div>    )}</code></pre><p><code>Nav.js</code></p><pre class=" language-react"><code class="language-react">import React from 'react';exprot default  function Nav(props) {    console.log(props);    return (        <div>            <h1>{props.title}</h1>            {props.nav.map((ele,index) => {                return (<li key={index}>{ele}</li>)            })}        </div>    )}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> React </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>react搭建MPA多页面应用实战记录</title>
       <link href="/2020/04/12/react%E6%90%AD%E5%BB%BAMPA%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/"/>
       <url>/2020/04/12/react%E6%90%AD%E5%BB%BAMPA%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/</url>
